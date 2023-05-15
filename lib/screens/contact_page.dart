@@ -13,6 +13,12 @@ class _ContactPageState extends State<ContactPage> {
     return Scaffold(
       appBar: AppBar(
         title: Text("Contact"),
+        leading: IconButton(
+          onPressed: () {
+            Scaffold.of(context).openDrawer();
+          },
+          icon: Icon(Icons.list),
+        ),
       ),
     );
   }

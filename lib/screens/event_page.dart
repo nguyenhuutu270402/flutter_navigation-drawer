@@ -13,6 +13,12 @@ class _EventPageState extends State<EventPage> {
     return Scaffold(
       appBar: AppBar(
         title: Text("Event"),
+        leading: IconButton(
+          onPressed: () {
+            Scaffold.of(context).openDrawer();
+          },
+          icon: Icon(Icons.list),
+        ),
       ),
     );
   }
