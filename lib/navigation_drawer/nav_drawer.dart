@@ -10,6 +10,8 @@ class NavDrawer extends StatefulWidget {
 }
 
 class _NavDrawerState extends State<NavDrawer> {
+  ValueNotifier<MyDrawerSections> currentPage =
+      ValueNotifier(MyDrawerSections.home);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,15 +23,21 @@ class _NavDrawerState extends State<NavDrawer> {
       ),
       drawer: Drawer(
           child: SingleChildScrollView(
-        child: Container(
-          child: Column(
-            children: [
-              MyHeaderDrawerWidget(),
-              MyListDrawerWidget(),
-            ],
-          ),
+        child: Column(
+          children: [
+            MyHeaderDrawerWidget(),
+            MyListDrawerWidget(currentPage: currentPage),
+          ],
         ),
       )),
     );
   }
+}
+
+enum MyDrawerSections {
+  home,
+  contact,
+  event,
+  profile,
+  setting,
 }
