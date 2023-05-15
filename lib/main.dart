@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_app/navigation_drawer/nav_drawer.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,9 +15,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'WhatsApp Me',
       home: Scaffold(
-        body: Center(
-          child: Text('Demo'),
-        ),
+        body: NavDrawer(),
       ),
     );
   }
