@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'WhatsApp Me',
+      title: 'Nav Drawer',
       home: Scaffold(
         body: NavDrawer(),
       ),
