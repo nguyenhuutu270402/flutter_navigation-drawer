@@ -74,8 +74,6 @@ class _MyListDrawerWidgetState extends State<MyListDrawerWidget> {
             case 2:
               widget.currentPage.value = MyDrawerSections.contact;
               widget.container.value = ContactPage();
-              // widget.container.notifyListeners();
-              // widget.currentPage.notifyListeners();
               break;
             case 3:
               widget.currentPage.value = MyDrawerSections.event;
@@ -104,14 +102,16 @@ class _MyListDrawerWidgetState extends State<MyListDrawerWidget> {
                 child: Icon(
                   icon,
                   size: 20,
-                  color: Colors.black,
+                  color: selected ? Colors.green : Colors.black,
                 ),
               ),
               Expanded(
                 flex: 1,
                 child: Text(
                   title,
-                  style: TextStyle(color: Colors.black, fontSize: 16),
+                  style: TextStyle(
+                      color: selected ? Colors.green : Colors.black,
+                      fontSize: 16),
                 ),
               ),
             ],

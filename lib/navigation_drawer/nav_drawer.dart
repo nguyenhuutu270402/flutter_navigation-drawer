@@ -17,9 +17,6 @@ class _NavDrawerState extends State<NavDrawer> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // appBar: AppBar(
-      //   title: Text("Navigation Drawer"),
-      // ),
       body: ValueListenableBuilder(
         valueListenable: container,
         builder: (context, value, child) {
